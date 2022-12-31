@@ -6,6 +6,8 @@ import org.junit.Test;
 /**
  * @Todo: 冒泡排序算法，
  * @Todo: 每次拿出一个元素和后面的所有元素比较大小，直到右边的数据和当前的元素比较符合排序的标准（升序，降序）
+ *          外圈的大循环走一轮，一定有一个数字排到对应的位置上，
+ *          如：第一次循环，数组的第一位一定会出现整个数组中最大的数（降序排序）
  * @return:{@link null}
  * @DateTime: 2022/2/2 17:04
  */
@@ -25,7 +27,7 @@ public class BubbleSort {
         int length = data.length;
         for (int i = 0; i < length; i++) {
             boolean flag = false;
-            for (int j = i+1; j < length - i; j++) {
+            for (int j = i + 1; j < length - i; j++) {
                 if (data[i] > data[j]) { //升序排序
                     temp = data[j];
                     data[j] = data[i];
@@ -55,8 +57,8 @@ public class BubbleSort {
         int length = data.length;
         for (int i = 0; i < length; i++) {
             boolean flag = false; //结束冒泡的标志
-            for (int j = 0;j < length-i-1;j++){
-                if(data[j] < data[j+1]){ //升序排序
+            for (int j = 0; j < length - i - 1; j++) {
+                if (data[j] < data[j + 1]) { //升序排序
                     temp = data[j];
                     data[j] = data[j + 1];
                     data[j + 1] = temp;
