@@ -38,6 +38,14 @@ public class AssignDataUtil {
         return dataInt;
     }
 
+    static public int[] fixDataInt(){
+        int [] arr ={14,16,21,28,32,37,52,86,99,68};
+        System.out.println("排序之前的数据");
+        System.out.println(AssignDataUtil.toString(arr));
+        return arr;
+    }
+
+
     public String toString() {
         String dataStr = "";
         for (int i = 0; i < data.length; i++) {
